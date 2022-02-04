@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/backgroundLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="35dp"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/mask1"
+            style="@style/MainFrameStyleButtonMask" />
+
+        <ImageButton
+            android:id="@+id/mask2"
+            style="@style/MainFrameStyleButtonMask" />
+
+        <ImageButton
+            android:id="@+id/mask3"
+            style="@style/MainFrameStyleButtonMask" />
+
+        <ImageButton
+            android:id="@+id/mask4"
+            style="@style/MainFrameStyleButtonMask" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="top|center"
+            android:text="Who is in front of you?"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/minionFrame"
+            style="@style/MainFrameStyle">
+
+            <ImageView
+                android:id="@+id/minionIcon"
+                style="@style/IconStyle"
+                app:srcCompat="@drawable/minion_icon" />
+
+            <LinearLayout
+                android:id="@+id/minionDataScope"
+                style="@style/DataScopeStyle">
+
+                <TextView
+                    android:id="@+id/minionTitle"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|bottom"
+                    android:text="Minions"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/minionDescription"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|top"
+                    android:text="Yellow and funny. Talking about bananas every time."
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yodaFrame"
+            style="@style/MainFrameStyle">
+
+            <ImageView
+                android:id="@+id/yodaIcon"
+                style="@style/IconStyle"
+                app:srcCompat="@drawable/yoda_icon" />
+
+            <LinearLayout
+                android:id="@+id/yodaDataScope"
+                style="@style/DataScopeStyle">
+
+                <TextView
+                    android:id="@+id/yodaTitle"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|bottom"
+                    android:text="Yoda"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/yodaDescription"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|top"
+                    android:text="Green. Master of the Jedi Order. Looks like a Grinch or a Gremlin."
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/grootFrame"
+            style="@style/MainFrameStyle">
+
+            <ImageView
+                android:id="@+id/grootIcon"
+                style="@style/IconStyle"
+                app:srcCompat="@drawable/groot_icon" />
+
+            <LinearLayout
+                android:id="@+id/grootDataScope"
+                style="@style/DataScopeStyle">
+
+                <TextView
+                    android:id="@+id/grootTitle"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|bottom"
+                    android:text="Groot"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/grootDescription"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|top"
+                    android:text="Tree. Just a talking tree. IT IS A BUCKING TALKING TREE!!!"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hodorFrame"
+            style="@style/MainFrameStyle">
+
+            <ImageView
+                android:id="@+id/hodorIcon"
+                style="@style/IconStyle"
+                app:srcCompat="@drawable/hodor_icon" />
+
+            <LinearLayout
+                android:id="@+id/hodorDataScope"
+                style="@style/DataScopeStyle">
+
+                <TextView
+                    android:id="@+id/hodorTitle"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|bottom"
+                    android:text="Hodor"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/hodorDescription"
+                    style="@style/TitleAndDescriptionStyle"
+                    android:gravity="center|top"
+                    android:text="Big and kind. But talking weird... Really weird..."
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

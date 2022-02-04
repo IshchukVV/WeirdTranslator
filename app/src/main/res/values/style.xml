@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainFrameStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <style name="IconStyle">
+        <item name="android:layout_width">200sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <style name="DataScopeStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <style name="TitleAndDescriptionStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center|bottom</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <style name="MainFrameStyleButtonMask">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">"@null"</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+</resources>
