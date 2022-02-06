@@ -69,10 +69,12 @@
             android:id="@+id/minionFrame"
             style="@style/MainFrameStyle">
 
-            <ImageView
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                app:round="10dp"
                 android:id="@+id/minionIcon"
                 style="@style/IconStyle"
-                app:srcCompat="@drawable/minion_icon" />
+                app:srcCompat="@drawable/minion_icon"
+                />
 
             <LinearLayout
                 android:id="@+id/minionDataScope"
@@ -98,7 +100,8 @@
             android:id="@+id/yodaFrame"
             style="@style/MainFrameStyle">
 
-            <ImageView
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                app:round="10dp"
                 android:id="@+id/yodaIcon"
                 style="@style/IconStyle"
                 app:srcCompat="@drawable/yoda_icon" />
@@ -127,7 +130,8 @@
             android:id="@+id/grootFrame"
             style="@style/MainFrameStyle">
 
-            <ImageView
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                app:round="10dp"
                 android:id="@+id/grootIcon"
                 style="@style/IconStyle"
                 app:srcCompat="@drawable/groot_icon" />
@@ -156,7 +160,8 @@
             android:id="@+id/hodorFrame"
             style="@style/MainFrameStyle">
 
-            <ImageView
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                app:round="10dp"
                 android:id="@+id/hodorIcon"
                 style="@style/IconStyle"
                 app:srcCompat="@drawable/hodor_icon" />

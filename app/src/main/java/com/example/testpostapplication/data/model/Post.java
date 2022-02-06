@@ -16,16 +16,7 @@ public class Post {
         return success;
     }
 
-    public void setSuccess(Success success) {
-        this.success = success;
-    }
-
     public Contents getContents() {
         return contents;
     }
-
-    public void setContents(Contents contents) {
-        this.contents = contents;
-    }
-
 }

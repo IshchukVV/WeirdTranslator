@@ -6,58 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".TranslateScreen">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/top_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="What do you want to say?"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/et_body"/>
+            android:hint="What do you wat to say to some character from list"
+            android:textSize="30sp" />
 
-        <EditText
-            android:id="@+id/et_body"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inputTextFrame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/et_body"
+                style="@style/TextField"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:autofillHints="Text to translate"
+                android:hint="Put your text here"
+                android:inputType="textMultiLine"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/mid_tv"/>
+
+            <TextView
+                android:id="@+id/mid_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You have to say:"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@+id/et_body"
+                app:layout_constraintBottom_toTopOf="@id/tv_response"/>
+
+            <TextView
+                android:id="@+id/tv_response"
+                style="@style/TextField"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Translated Text"
+                app:layout_constraintTop_toBottomOf="@+id/mid_tv"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/btnFrame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Text to translate"
-            app:layout_constraintTop_toBottomOf="@+id/top_tv"
-            app:layout_constraintBottom_toTopOf="@+id/mid_tv"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/mid_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="You have to say:"
-            app:layout_constraintTop_toBottomOf="@+id/et_body"
-            app:layout_constraintBottom_toTopOf="@+id/tv_response" />
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Translate" />
 
-        <TextView
-            android:id="@+id/tv_response"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Translated Text"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_submit"
-            app:layout_constraintTop_toBottomOf="@+id/mid_tv" />
-
-        <Button
-            android:id="@+id/btn_submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Translate"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_response" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            <Button
+                android:id="@+id/btn_goBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go Back" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

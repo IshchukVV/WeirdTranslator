@@ -9,7 +9,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface APIService {
-    @POST("https://api.funtranslations.com/translate/{translatorType}.json")
+    @POST("{translatorType}.json")
     @FormUrlEncoded
     Call<Post> savePost(@Path("translatorType") String translatorType, @Field("text") String text);
 }

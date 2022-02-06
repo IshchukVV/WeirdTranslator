@@ -30,25 +30,24 @@ public class MainActivity extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.mask1:
                     TranslatorModel.setTranslatorType("minion");
-                    System.out.println("Mask 1 is pressed");
+                    TranslatorModel.setTranslatorTitle("Funny yellows Minion");
                     break;
                 case R.id.mask2:
                     TranslatorModel.setTranslatorType("yoda");
-                    System.out.println("Mask 2 is pressed");
+                    TranslatorModel.setTranslatorTitle("Master of the Jedi Order Yoda");
                     break;
                 case R.id.mask3:
                     TranslatorModel.setTranslatorType("groot");
-                    System.out.println("Mask 3 is pressed");
+                    TranslatorModel.setTranslatorTitle("Talking tree Groot");
                     break;
                 case R.id.mask4:
                     TranslatorModel.setTranslatorType("hodor");
-                    System.out.println("Mask 4 is pressed");
+                    TranslatorModel.setTranslatorTitle("Big Man Hodor");
                     break;
                 default:
                     Toast.makeText(MainActivity.this, "Unexpected Translator Code", Toast.LENGTH_SHORT).show();
                     throw new IllegalStateException("Unexpected value: " + view.getId());
             }
-            System.out.println("Start translate screen activity");
             startActivity(new Intent(MainActivity.this, TranslateScreen.class));
         };
         mask1.setOnClickListener(onClickListener);
