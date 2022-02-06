@@ -26,7 +26,7 @@ public class TranslateScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translate_screen);
         final TextView topTv = findViewById(R.id.top_tv);
-        topTv.setText("What do you want to sat to " + TranslatorModel.getTranslatorTitle() + "?");
+        topTv.setText("What do you want to say to " + TranslatorModel.getTranslatorTitle() + "?");
         final EditText bodyEt = findViewById(R.id.et_body);
         final Button submitBtn = findViewById(R.id.btn_submit);
         final Button goBackBtn = findViewById(R.id.btn_goBack);
