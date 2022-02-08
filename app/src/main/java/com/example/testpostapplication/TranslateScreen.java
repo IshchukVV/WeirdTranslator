@@ -24,6 +24,7 @@ public class TranslateScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TranslatorModel translatorModel = TranslatorModel.getInstance();
+        translatorModel.setResponse("Translated Text");
         ActivityTranslateScreenBinding translateScreenBinding = DataBindingUtil.setContentView(this, R.layout.activity_translate_screen);
         translateScreenBinding.setTranslatorModel(translatorModel);
 

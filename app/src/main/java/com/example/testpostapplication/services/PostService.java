@@ -18,13 +18,10 @@ public interface PostService {
                 if (response.isSuccessful()) {
                     assert response.body() != null;
                     translatorModel.setResponse(response.body().getContents().getTranslated());
-                    System.out.println(response.body().getContents().getTranslated());
                 } else if (response.code() == 429) {
                     translatorModel.setResponse("ERROR! Sorry. I am too poor to buy a subscription so you can translate only 5 times per hour and only 60 times per day.");
-                    System.out.println("ERROR! Sorry. I am too poor to buy a subscription so you can translate only 5 times per hour and only 60 times per day.");
                 } else {
                     translatorModel.setResponse("ERROR! Something really goes wrong. Response code is " + response.code());
-                    System.out.println("ERROR! Something really goes wrong. Response code is " + response.code());
                 }
             }
 
