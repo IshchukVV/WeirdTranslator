@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         permissionCheck();
-
+        TranslatorModel translatorModel = TranslatorModel.getInstance();
         ImageButton mask1 = findViewById(R.id.mask1);
         ImageButton mask2 = findViewById(R.id.mask2);
         ImageButton mask3 = findViewById(R.id.mask3);
@@ -29,20 +29,20 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener onClickListener = view -> {
             switch (view.getId()) {
                 case R.id.mask1:
-                    TranslatorModel.setTranslatorType("minion");
-                    TranslatorModel.setTranslatorTitle("Funny yellows Minion");
+                    translatorModel.setTranslatorType("minion");
+                    translatorModel.setTranslatorTitle("Funny yellows Minion");
                     break;
                 case R.id.mask2:
-                    TranslatorModel.setTranslatorType("yoda");
-                    TranslatorModel.setTranslatorTitle("Master of the Jedi Order Yoda");
+                    translatorModel.setTranslatorType("yoda");
+                    translatorModel.setTranslatorTitle("Master Yoda");
                     break;
                 case R.id.mask3:
-                    TranslatorModel.setTranslatorType("groot");
-                    TranslatorModel.setTranslatorTitle("Talking tree Groot");
+                    translatorModel.setTranslatorType("groot");
+                    translatorModel.setTranslatorTitle("Talking tree Groot");
                     break;
                 case R.id.mask4:
-                    TranslatorModel.setTranslatorType("hodor");
-                    TranslatorModel.setTranslatorTitle("Big Man Hodor");
+                    translatorModel.setTranslatorType("hodor");
+                    translatorModel.setTranslatorTitle("Big Man Hodor");
                     break;
                 default:
                     Toast.makeText(MainActivity.this, "Unexpected Translator Code", Toast.LENGTH_SHORT).show();
